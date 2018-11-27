@@ -29,7 +29,7 @@ public class Controller {
 		dh = new DataHandler();
 		cf = new ControlFrame(dh);
 		wd = new WebcamDisplay(cf);
-		ca = new ClientAudioHandler(ROVER_HOSTNAME);
+		//ca = new ClientAudioHandler(ROVER_HOSTNAME);
 		
 		
 		dh.addReciever(mc);
@@ -43,6 +43,7 @@ public class Controller {
 			String input = stdin.nextLine();
 			if (input.equals("q"))
 				done = true;
+			
 			else
 				tr.sendMessage(input);
 			

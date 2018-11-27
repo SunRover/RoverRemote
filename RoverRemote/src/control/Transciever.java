@@ -40,6 +40,7 @@ public class Transciever extends Thread{
 	
 	//Send a string to the client
 	public void sendMessage(String s) {
+		System.out.println("TRANSCIEVER: sent \"" + s + "\"");
 		out.println(s);
 	}
 	

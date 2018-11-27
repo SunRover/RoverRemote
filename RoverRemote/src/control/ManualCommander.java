@@ -10,7 +10,7 @@ import tools.DataHandler;
 import tools.DataReciever;
 
 public class ManualCommander extends Commander implements DataReciever{
-	public static final int[] input_types = {DataHandler.DTYPE_KEYPRESS_SOURCE1};
+	public static final String[] input_types = {DataTypes.DTYPE_KEYPRESS_SOURCE1};
 	String command;
 	
 	public ManualCommander(Controller c) {
@@ -53,7 +53,7 @@ public class ManualCommander extends Commander implements DataReciever{
 		sendCommand(command);
 	}
 
-	public int[] getDataTypes() {
+	public String[] getDataTypes() {
 		return input_types;
 	}
 	
@@ -61,7 +61,7 @@ public class ManualCommander extends Commander implements DataReciever{
 		sendCommand(command);
 	}
 
-	public void recieveData(int type, Object data) {
+	public void recieveData(String type, Object data) {
 		if (type == input_types[0]) {
 			processKey((KeyEvent) data);
 		}
